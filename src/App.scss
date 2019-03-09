@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  &-input {
+    width: 350px;
+    border: 0;
+    border-bottom: 1px solid white;
+    background: none;
+    text-align: center;
+    font-size: 24px;
+    outline: none;
+    color: white;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
