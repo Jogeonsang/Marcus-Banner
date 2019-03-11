@@ -6,11 +6,11 @@ const moduleName = "Input";
 const cx = classnames.bind(styles);
 
 interface Props {
-  handleInputChange(): void;
+  handleInputChange(e: React.FormEvent<HTMLInputElement>): void;
 }
 
 const Input: React.SFC<Props> = ({ handleInputChange }) => (
-  <div>
+  <div className={cx(`${moduleName}`)}>
     <input
       className={cx(`${moduleName}-input`)}
       type="text"
