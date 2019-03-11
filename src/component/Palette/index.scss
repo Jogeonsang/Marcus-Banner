@@ -1,12 +1,27 @@
 .PaletteBox {
   display: flex;
+  justify-content: center;
+  width: 100%;
+  &-wrap {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  &-palettes {
+    text-align: left;
+    width: 150px;
+    padding: 10px 0;
+  }
   &-palette {
     font-size: 12px;
     letter-spacing: 0.05em;
     list-style: none;
     cursor: pointer;
     &:hover {
-      color: white;
     }
     &-box {
       width: 14px;

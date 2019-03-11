@@ -13,20 +13,25 @@ interface Props {
 
 const Palette: React.SFC<Props> = ({ paletteBox }) => (
   <div className={cx(`${moduleName}`)}>
-    {paletteBox.map(palette => (
-      <ul>
-        <li
-          className={cx(`${moduleName}-palette`)}
-          style={{ color: "#868e96" }}
-        >
-          <span
-            className={cx(`${moduleName}-palette-box`)}
-            style={{ backgroundColor: palette.color }}
-          />
-          {palette.name}
+    <ul className={cx(`${moduleName}-wrap`)}>
+      {paletteBox.map(palette => (
+        <li className={cx(`${moduleName}-palettes`)}>
+          <div
+            className={cx(`${moduleName}-palette`)}
+            style={{
+              color: "#868e96",
+              ":hover": { color: `${palette.color}` }
+            }}
+          >
+            <span
+              className={cx(`${moduleName}-palette-box`)}
+              style={{ backgroundColor: palette.color }}
+            />
+            {palette.name}
+          </div>
         </li>
-      </ul>
-    ))}
+      ))}
+    </ul>
   </div>
 );
 
