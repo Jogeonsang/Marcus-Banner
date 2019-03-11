@@ -37,13 +37,23 @@ class App extends React.Component<Props, State> {
       { color: "#D6326C", name: "PINK" },
       { color: "#4263EB", name: "INDIGO" },
       { color: "#0DA678", name: "TEAL" },
-      { color: "#F59F01", name: "YELLOW" }
+      { color: "#F59F01", name: "YELLOW" },
+      { color: "#F7E017", name: "JAVASCRIPT" },
+      { color: "#007ACC", name: "TYPESCRIPT" },
+      { color: "#81D8F7", name: "REACT" },
+      { color: "#00BD7D", name: "VUE" }
     ]
   };
 
   handleInputChange = (e: React.FormEvent<HTMLInputElement>): void => {
     this.setState({
       text: e.currentTarget.value
+    });
+  };
+
+  handleColorChange = (color: string): void => {
+    this.setState({
+      backgroundColor: color
     });
   };
   render() {
@@ -57,7 +67,10 @@ class App extends React.Component<Props, State> {
           backgroundColor={backgroundColor}
         />
         <Input handleInputChange={this.handleInputChange} />
-        <Palette paletteBox={paletteBox} />
+        <Palette
+          paletteBox={paletteBox}
+          handleColorChange={this.handleColorChange}
+        />
       </div>
     );
   }

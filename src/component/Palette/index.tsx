@@ -9,9 +9,10 @@ const cx = classnames.bind(styles);
 
 interface Props {
   paletteBox: Array<{ color: string; name: string }>;
+  handleColorChange(color: string): void;
 }
 
-const Palette: React.SFC<Props> = ({ paletteBox }) => (
+const Palette: React.SFC<Props> = ({ paletteBox, handleColorChange }) => (
   <div className={cx(`${moduleName}`)}>
     <ul className={cx(`${moduleName}-wrap`)}>
       {paletteBox.map(palette => (
@@ -19,9 +20,9 @@ const Palette: React.SFC<Props> = ({ paletteBox }) => (
           <div
             className={cx(`${moduleName}-palette`)}
             style={{
-              color: "#868e96",
-              ":hover": { color: `${palette.color}` }
+              color: "#868e96"
             }}
+            onClick={() => handleColorChange(palette.color)}
           >
             <span
               className={cx(`${moduleName}-palette-box`)}

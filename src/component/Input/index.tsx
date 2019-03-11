@@ -12,6 +12,7 @@ interface Props {
 const Input: React.SFC<Props> = ({ handleInputChange }) => (
   <div className={cx(`${moduleName}`)}>
     <input
+      name="text"
       className={cx(`${moduleName}-input`)}
       type="text"
       placeholder="Please enter text"
