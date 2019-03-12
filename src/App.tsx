@@ -13,6 +13,7 @@ interface Props {}
 
 interface State {
   text: string;
+  href: string;
   color: string;
   fontSize: string;
   backgroundColor: string;
@@ -21,13 +22,14 @@ interface State {
 
 class App extends React.Component<Props, State> {
   state: State = {
-    text: "",
+    text: "SAMPLE TEXT",
+    href: "",
     color: "white",
     fontSize: "24px",
     backgroundColor: "#4263EB",
     paletteBox: [
       { color: "#495057", name: "GRAY" },
-      { color: "#AE3EC8", name: "GRAFE" },
+      { color: "#AE3EC8", name: "GRAPE" },
       { color: "#1C7ED5", name: "BLUE" },
       { color: "#36B24D", name: "GREEN" },
       { color: "#F76706", name: "ORANGE" },
@@ -56,8 +58,21 @@ class App extends React.Component<Props, State> {
       backgroundColor: color
     });
   };
+
+  handleCanvasChange = (href: string): void => {
+    this.setState({
+      href: href
+    });
+  };
   render() {
-    const { text, color, fontSize, backgroundColor, paletteBox } = this.state;
+    const {
+      text,
+      color,
+      fontSize,
+      backgroundColor,
+      paletteBox,
+      href
+    } = this.state;
     return (
       <div className={cx(`${moduleName}`)}>
         <Preview
@@ -65,12 +80,17 @@ class App extends React.Component<Props, State> {
           color={color}
           fontSize={fontSize}
           backgroundColor={backgroundColor}
+          handleCanvasChange={this.handleCanvasChange}
+          href={href}
         />
         <Input handleInputChange={this.handleInputChange} />
         <Palette
           paletteBox={paletteBox}
           handleColorChange={this.handleColorChange}
         />
+        <a href={href} download="banner-image.png">
+          Download
+        </a>
       </div>
     );
   }

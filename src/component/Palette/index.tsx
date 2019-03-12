@@ -1,10 +1,15 @@
 import React from "react";
 import classnames from "classnames/bind";
-
+import styled from "styled-components";
 import styles from "./index.scss";
-
 const moduleName = "PaletteBox";
 const cx = classnames.bind(styles);
+
+// const Li = styled.li`
+// :hover {
+//     color: ${palette.color};
+//   }
+// `
 /** @type {{hover: React.CSSProperties}} */
 
 interface Props {
