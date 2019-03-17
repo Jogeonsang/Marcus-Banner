@@ -125,8 +125,8 @@ class Preview extends Component<Props> {
         <canvas
           className={cx(`${moduleName}-container`)}
           ref={this.canvasRef}
-          width="700px"
-          height="350px"
+          width="800px"
+          height="400px"
         />
       </div>
     );

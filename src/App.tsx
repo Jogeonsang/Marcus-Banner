@@ -5,6 +5,7 @@ import styles from "./App.scss";
 import Input from "./component/Input";
 import Preview from "./component/Preview";
 import Palette from "./component/Palette";
+import SaveButton from "./component/SaveButton";
 
 const moduleName = "App";
 const cx = classnames.bind(styles);
@@ -75,6 +76,7 @@ class App extends React.Component<Props, State> {
     } = this.state;
     return (
       <div className={cx(`${moduleName}`)}>
+        <p>Marcus Banner is an easy way to create banner images for blogs.</p>
         <Preview
           text={text}
           color={color}
@@ -88,9 +90,7 @@ class App extends React.Component<Props, State> {
           paletteBox={paletteBox}
           handleColorChange={this.handleColorChange}
         />
-        <a href={href} download="banner-image.png">
-          Download
-        </a>
+        <SaveButton href={href} backgroundColor={backgroundColor} />
       </div>
     );
   }
