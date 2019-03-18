@@ -1,14 +1,25 @@
 .App {
   text-align: center;
-  &-download {
-  }
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  &-title {
+    font-weight: 600;
+    font-size: 30px;
+    color: #343a40;
+    margin-right: 440px;
   }
-  to {
-    transform: rotate(360deg);
+  &-subTitle {
+    font-weight: 600;
+    font-size: 24px;
+    color: #343a40;
+    margin-right: 235px;
+  }
+  &-name {
+    color: #858e96;
+    margin-top: 40px;
+    margin-right: 575px;
+  }
+  &-github {
+    margin-right: 664px;
+    color: #858e96;
   }
 }

@@ -76,7 +76,20 @@ class App extends React.Component<Props, State> {
     } = this.state;
     return (
       <div className={cx(`${moduleName}`)}>
-        <p>Marcus Banner is an easy way to create banner images for blogs.</p>
+        <div className={cx(`${moduleName}-titleBox`)}>
+          <p className={cx(`${moduleName}-title`)}>Marcus Banner is an</p>
+          <p className={cx(`${moduleName}-subTitle`)}>
+            easy way to create banner images for blogs
+          </p>
+          <p className={cx(`${moduleName}-name`)}>Made by. MARCUS</p>
+          <a
+            className={cx(`${moduleName}-github`)}
+            href={`https://github.com/Jogeonsang/blog-banner-generator`}
+            target="blank"
+          >
+            Github
+          </a>
+        </div>
         <Preview
           text={text}
           color={color}
