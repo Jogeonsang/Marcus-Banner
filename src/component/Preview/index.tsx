@@ -112,14 +112,6 @@ class Preview extends Component<Props> {
     }
   };
   render() {
-    const {
-      text,
-      color,
-      fontSize,
-      backgroundColor,
-      href,
-      handleCanvasChange
-    } = this.props;
     return (
       <div className={cx(`${moduleName}`)}>
         <canvas
@@ -132,25 +124,4 @@ class Preview extends Component<Props> {
     );
   }
 }
-
-// const Preview: React.SFC<Props> = ({
-//   text,
-//   color,
-//   fontSize,
-//   backgroundColor,
-//   href,
-//   handleCanvasChange
-// }) => (
-//   <div className={cx(`${moduleName}`)}>
-//     <div
-//       className={cx(`${moduleName}-container`)}
-//       style={{
-//         color: `${color}`,
-//         fontSize: `${fontSize}`,
-//         backgroundColor: `${backgroundColor}`
-//       }}
-//     >{`${text}`}</div>
-//     <canvas className="previewCanvas" />
-//   </div>
-// );
 export default Preview;
