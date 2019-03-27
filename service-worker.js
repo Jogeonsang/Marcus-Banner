@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Marcus-Banner/precache-manifest.175bfb312f88d4870742b9220b5d24c5.js"
+  "/Marcus-Banner/precache-manifest.0590a6f9b9ead3c782556f260444b135.js"
 );
 
 workbox.clientsClaim();
